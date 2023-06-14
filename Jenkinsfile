@@ -8,16 +8,10 @@ pipeline {
                     node {
                        def remote = [:]
                        remote.name = 'fabio'
-                       remote.host = '40.127.107.20'
+                       remote.host = '20.43.59.103'
                        remote.user = 'fabio'
                        remote.identity = '~/.ssh/id_rsa'
                        remote.allowAnyHosts = true
-                       def secondRemote = [:]
-                       secondRemote.name = 'fabio'
-                       secondRemote.host = '4.233.106.239'
-                       secondRemote.user = 'fabio'
-                       remote.identity = '~/.ssh/id_rsa'
-                       secondRemote.allowAnyHosts = true
                     }
                 }
             }

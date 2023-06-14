@@ -1,0 +1,8 @@
+- name: "Install apache2" 
+  package: name=apache2 state=present
+- name: overwrite default Apache config
+  template:
+    src: /home/fabio/projet-ansible/info.php
+    dest: /var/www/html/
+- name: "Install php"
+  apt: name=php update_cache=yes state=latest

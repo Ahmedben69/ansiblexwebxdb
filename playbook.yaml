@@ -1,0 +1,14 @@
+- hosts: webserver
+  become: true
+  become_user: root
+  roles:
+    - web
+
+
+  
+- hosts: mysqlserver
+  user: fabio
+  become: True
+  become_user: root
+  vars:
+    MySQL_root_pass: Test_123456$

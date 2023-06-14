@@ -1,0 +1,4 @@
+- name: Restart mysql # Debian os family
+  service:
+    name: mysql
+    state: restarted

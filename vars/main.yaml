@@ -1,0 +1,8 @@
+mysql_user: "fabio"
+mysql_password: "Test_123456$"
+mysql_dbname: "mysqlserver"
+webserver_host: "20.43.59.103"
+db_host: "4.233.106.239"
+extra_packages_debian: ['php-curl', 'php-gd', 'php-mbstring'] 
+extra_packages_redhat: ['php-xml', 'php-gd', 'php-mbstring'] 
+root_password: "Test_123456$"

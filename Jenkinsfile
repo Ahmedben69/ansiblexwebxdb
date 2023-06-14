@@ -22,17 +22,6 @@ pipeline {
                 }
             }
         }
-        
-        
-       
-       
-        stage ('ssh-agent') {
-            steps {
-                script {
-                    sh "ssh-agent bash && ssh-add ~/.ssh/id_rsa"
-        }
-            }    
-                    }
             
         stage ('Ansible-playbook') {
             steps {

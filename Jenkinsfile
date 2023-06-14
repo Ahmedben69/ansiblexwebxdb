@@ -7,13 +7,13 @@ pipeline {
                 script{
                     node {
                        def remote = [:]
-                       remote.name = 'fabio1'
+                       remote.name = 'fabio'
                        remote.host = '20.43.59.103'
                        remote.user = 'fabio'
                        remote.identityFile = '/home/fabio/.ssh/id_rsa.pub'
                        remote.allowAnyHosts = true
                        def secondRemote = [:]
-                       secondRemote.name = 'fabio2'
+                       secondRemote.name = 'fabio'
                        secondRemote.host = '4.233.106.239'
                        secondRemote.user = 'fabio'
                        secondRemote.identityFile = '/home/fabio/.ssh/id_rsa.pub'

@@ -4,10 +4,7 @@ pipeline {
     stages {
         stage ('Ansible-playbook') {
             steps {
-                script {
-                    sh "ansible -i mon_inventaire.ini -m ping all"
-                    sh "ansible-playbook playbook.yaml -i mon_inventaire.ini"
-                }                
+                ansiblePlaybook credentialsId: 'fabio', disableHostKeyChecking: true, installation: 'ansible', inventory: '/var/lib/jenkins/workspace/ansiblexwebxdb/mon_inventaire.ini', playbook: '/var/lib/jenkins/workspace/ansiblexwebxdb/playbook.yaml'
             }           
         }    
     }

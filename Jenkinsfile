@@ -10,13 +10,13 @@ pipeline {
                        remote.name = 'fabio'
                        remote.host = '40.127.107.20'
                        remote.user = 'fabio'
-                       remote.identityFile = '/var/lib/jenkins/.ssh/key1.pem'
+                       remote.identityFile = '/home/fabio/.ssh/authorized_keys'
                        remote.allowAnyHosts = true
                        def secondRemote = [:]
                        secondRemote.name = 'fabio'
                        secondRemote.host = '4.233.106.239'
                        secondRemote.user = 'fabio'
-                       remote.identityFile = '/var/lib/jenkins/.ssh/key2.pem'
+                       remote.identityFile = '/home/fabio/.ssh/authorized_keys'
                        secondRemote.allowAnyHosts = true
                     }
                 }

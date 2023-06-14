@@ -10,7 +10,7 @@ pipeline {
                        remote.name = 'fabio'
                        remote.host = '20.43.59.103'
                        remote.user = 'fabio'
-                       remote.identity = '~/.ssh/id_rsa'
+                       remote.identityFile = '~/.ssh/id_rsa'
                        remote.allowAnyHosts = true
                     }
                 }

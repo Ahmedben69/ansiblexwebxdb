@@ -8,7 +8,7 @@ pipeline {
                     node {
                        def remote = [:]
                        remote.name = 'fabio'
-                       remote.host = '20.43.59.103'
+                       remote.host = '40.127.107.20'
                        remote.user = 'fabio'
                        remote.identityFile = '/home/fabio/.ssh/id_rsa.pub'
                        remote.allowAnyHosts = true

@@ -27,8 +27,7 @@ pipeline {
                 script {
                     sh "ansible-playbook playbook.yaml -i mon_inventaire.ini"
                 }                
-            }
-           
+            }           
         }    
     }
 }

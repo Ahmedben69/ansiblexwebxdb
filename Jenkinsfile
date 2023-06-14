@@ -2,10 +2,10 @@ pipeline {
     agent any
    
     stages {
-        stage('SSH') {
-           steps {
-               script{
-                   node {
+        stage('SSH') { 
+            steps {
+                script{
+                    node {
                        def remote = [:]
                        remote.name = 'fabio1'
                        remote.host = '20.43.59.103'
@@ -18,16 +18,17 @@ pipeline {
                        secondRemote.user = 'fabio'
                        secondRemote.password = 'Dofus69200Fabioa'
                        secondRemote.allowAnyHosts = true
-                   }
-               }
-           }
-        
+                    }
+                }
+            }
+        }
         stage ('Ansible-playbook') {
             steps {
                 script {
                     sh "ansible-playbook playbook.yaml -i mon_inventaire.ini"
                 }                
             }
-        }   
-    }    
+           
+        }    
+    }
 }

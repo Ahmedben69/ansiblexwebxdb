@@ -9,19 +9,31 @@ pipeline {
                        def remote = [:]
                        remote.name = 'fabio'
                        remote.host = '40.127.107.20'
-                       remote.user = 'jenkins'
-                       remote.identityFile = '/var/lib/jenkins/.ssh/key1.pem'
+                       remote.user = 'fabio'
+                       remote.identityFile = '~/.ssh/id_rsa'
                        remote.allowAnyHosts = true
                        def secondRemote = [:]
                        secondRemote.name = 'fabio'
                        secondRemote.host = '4.233.106.239'
-                       secondRemote.user = 'jenkins'
-                       remote.identityFile = '/var/lib/jenkins/.ssh/key2.pem'
+                       secondRemote.user = 'fabio'
+                       remote.identityFile = '~/.ssh/id_rsa'
                        secondRemote.allowAnyHosts = true
                     }
                 }
             }
         }
+        
+        
+       
+       
+        stage ('ssh-agent') {
+            steps {
+                script {
+                    sh "ssh-agent bash && ssh-add ~/.ssh/id_rsa"
+        }
+            }    
+                    }
+            
         stage ('Ansible-playbook') {
             steps {
                 script {

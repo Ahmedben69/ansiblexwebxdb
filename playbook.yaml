@@ -1,4 +1,4 @@
-- hosts: webserver
+- hosts: apache
   become: true
   become_user: root
   roles:
@@ -6,7 +6,7 @@
 
 
   
-- hosts: mysqlserver
+- hosts: mysql
   user: fabio
   become: True
   become_user: root

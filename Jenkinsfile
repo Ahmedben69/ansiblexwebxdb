@@ -10,7 +10,7 @@ pipeline {
                        remote.name = 'fabio'
                        remote.host = '40.127.107.20'
                        remote.user = 'fabio'
-                       remote.identityFile = '~/.ssh/id_rsa'
+                       remote.password = 'Dofus69200Fabio'
                        remote.allowAnyHosts = true
                        def secondRemote = [:]
                        secondRemote.name = 'fabio'

@@ -10,13 +10,13 @@ pipeline {
                        remote.name = 'fabio'
                        remote.host = '40.127.107.20'
                        remote.user = 'fabio'
-                       remote.identityFile = '/home/fabio/.ssh/id_rsa'
+                       remote.identityFile = '/var/lib/jenkins/.ssh/id_rsa'
                        remote.allowAnyHosts = true
                        def secondRemote = [:]
                        secondRemote.name = 'fabio'
                        secondRemote.host = '4.233.106.239'
                        secondRemote.user = 'fabio'
-                       secondRemote.identityFile = '/home/fabio/.ssh/id_rsa'
+                       secondRemote.identityFile = '/var/lib/jenkins/.ssh/id_rsa'
                        secondRemote.allowAnyHosts = true
                     }
                 }
